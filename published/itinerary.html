@@ -8,6 +8,9 @@
         <link href="css/mbphillips.css" rel="stylesheet" rel="stylesheet">
         <link href="css/bootstrap-responsive.css" rel="stylesheet">
         <link rel="icon" type="image/ico" href="media/favorite.ico">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,8 +41,16 @@
             <h1>Itinerary</h1>
             <p>The <b>OUTDOOR</b> ceremony will be followed by a Cocktail Hour on the Porch and Lawn. Sit down dinner will be served in the barn.</p>
 
+            <div id="getting-started"></div>
+            <script type="text/javascript">
+              jQuery("#getting-started")
+              .countdown("2018/04/22", function(event) {
+                jQuery(this).text(
+                  event.strftime('%D days %H:%M:%S')
+                );
+              });
+            </script>
+
         </div> <!-- /container -->
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+      </body>
 </html>
